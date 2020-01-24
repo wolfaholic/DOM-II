@@ -12,8 +12,6 @@ element.style.transform = "scale(1)"
 
 //Unique Event Listener 3: Changing Image to a new image
 const busImage = document.querySelector('.bus-img');
- 
-
 busImage.addEventListener('dblclick', () => {
 busImage.src = "img/bus.gif";
 })
@@ -26,8 +24,11 @@ colorChange.style.backgroundColor = "dodgerblue";
 
 
 
-//Unique Event Listern 5: Mouse Over - 
-
+//Unique Event Listern 5: KeyDown - 
+const keyDown = document.querySelector(".destination h4");
+keyDown.addEventListener('keydown', () => {
+keyDown.textContent = "I did it!";
+})
 
 
 
