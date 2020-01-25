@@ -41,28 +41,37 @@ if (scrolled === scrollable) {
 
 //Unique Event Listern 6: focus will turn input field blue
 const focus = document.querySelector("input");
-console.log(focus);
 focus.addEventListener('focus', (event) => {
  event.target.style.background= "dodgerblue";
 })
 
 
-//Unique Event Listern 7: Key Up
+//Unique Event Listern 7: Wheel scroll over the Lets go H4 tag causes it to grow
+const wheelEvent = document.querySelectorAll(".lets-go");
+wheelEvent.forEach(element => {element.addEventListener('wheel', () => {
+element.style.transform = "scale(1.5)";
+element.style.transition = "all 0.3s";
+}) });
+
+ 
+
+//Unique Event Listern 8:  Mousing over home container turns background blue
+ const mouseOver = document.querySelector(".home");
+ mouseOver.addEventListener('mouseover', (event) => {
+    event.target.style.background= "dodgerblue";
+   
+    setTimeout(function() {
+        event.target.style.background = "";
+      }, 500);
+    }, false);
+ 
 
 
-
-
-//Unique Event Listern 8: Key Down
-
-
-
-
-//Unique Event Listern 9: Resize
-
-
-
-
-//Unique Event Listern 10: Scroll
+//Unique Event Listern 9:  
+ 
+ 
+ 
+//Unique Event Listern 10:  
 
 
 
