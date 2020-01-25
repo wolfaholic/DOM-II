@@ -24,18 +24,27 @@ colorChange.style.backgroundColor = "dodgerblue";
 
 
 
-//Unique Event Listern 5: KeyDown - 
-const keyDown = document.querySelector(".destination h4");
-keyDown.addEventListener('keydown', () => {
-keyDown.textContent = "I did it!";
+//Unique Event Listern 5: Scroll Event- when scrolling to the bottom it will alert with message
+ 
+window.addEventListener("scroll", () => {
+const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+const scrolled = window.scrollY;
+
+if (scrolled === scrollable) {
+    alert ('You have reached the bottom!')
+}
 })
+ 
+ 
 
 
 
-
-//Unique Event Listern 6: Mouse out
-
-
+//Unique Event Listern 6: focus will turn input field blue
+const focus = document.querySelector("input");
+console.log(focus);
+focus.addEventListener('focus', (event) => {
+ event.target.style.background= "dodgerblue";
+})
 
 
 //Unique Event Listern 7: Key Up
